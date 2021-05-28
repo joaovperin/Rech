@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__start {
+    display: flex;
+    align-items: center;
+}
+
+.header__icon {
+    width: 13rem;
+}
+
+.header__search {
+    width: 30rem;
+    padding: .8rem;
+    margin-left: 2rem;
+    background: #424446;
+    border: none;
+    border-radius: 1rem;
+}
+
+.header__search:focus {
+    outline:none;
+}
+
+.header__end {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.header__nav {
+    text-decoration: underline;
+}
