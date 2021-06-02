@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  # MySQL 8 Database
+  mysql-service:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=pestana
+  # Spring WebService
+  web-service:
+    build:
+      context: ./
+      dockerfile: containers/backend.docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-service
